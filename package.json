@@ -1,12 +1,18 @@
 {
-  "name": "backend",
+  "name": "student-portal",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "MERN Stack Student Portal",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd frontend && npm install && npm run build",
+    "install-client": "cd frontend && npm install",
+    "vercel-build": "npm run install-client && npm run build"
   },
-  "keywords": [],
+  "keywords": ["MERN", "React", "Node", "Express", "MongoDB"],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -17,5 +23,9 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.18.0",
     "nodemailer": "^7.0.6"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "nodemon": "^3.0.1"
   }
 }
