@@ -10,7 +10,7 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "build": "cd frontend && npm install && npm run build",
     "install-client": "cd frontend && npm install",
-    "vercel-build": "npm run install-client && npm run build"
+    "vercel-build": "npm run install && npm run build"
   },
   "keywords": ["MERN", "React", "Node", "Express", "MongoDB"],
   "author": "",
