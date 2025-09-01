@@ -9,7 +9,7 @@
       "src": "frontend/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "build"
+        "distDir": "dist"
       }
     }
   ],
@@ -19,23 +19,11 @@
       "dest": "/api/$1"
     },
     {
-      "src": "^/static/(.*)",
-      "dest": "/static/$1"
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
     },
     {
-      "src": "^/favicon.ico",
-      "dest": "/favicon.ico"
-    },
-    {
-      "src": "^/asset-manifest.json",
-      "dest": "/asset-manifest.json"
-    },
-    {
-      "src": "^/manifest.json",
-      "dest": "/manifest.json"
-    },
-    {
-      "src": "^/(.*)",
+      "src": "/(.*)",
       "dest": "/index.html"
     }
   ]
